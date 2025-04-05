@@ -5,9 +5,9 @@ on:
   workflow_dispatch:
 
 env:
-  CIBW_ARCHS_LINUX: "x86_64"
+  CIBW_ARCHS_LINUX: "x86_64 aarch64"
   CIBW_ARCHS_WINDOWS: "AMD64"
-  CIBW_BUILD: "cp312-win_* cp313-win_* cp312-manylinux_x86_64 cp312-manylinux_x86_64"
+  CIBW_BUILD: "cp312-win_* cp313-win_* cp312-manylinux_x86_64 cp312-manylinux_x86_64 cp312-manylinux_aarch64 cp313-manylinux_aarch64"
 
 jobs:
   build_wheels:
@@ -17,7 +17,8 @@ jobs:
       matrix:
         # os: [ubuntu-latest, ubuntu-24.04-arm, windows-latest, macos-13, macos-latest]
         # os: [ubuntu-latest, ]
-        os: [ubuntu-latest, windows-latest, ]
+        # os: [ubuntu-latest, windows-latest, ]
+        os: [ubuntu-24.04-arm, ]
 
     steps:
       - uses: actions/checkout@v4
