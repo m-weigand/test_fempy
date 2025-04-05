@@ -14,11 +14,11 @@ authors = [
   {name = 'Maximilian Weigand', email = 'mweigand@geo.uni-bonn.de'},
 ]
 
-[tool.cibuildwheel]
-# https://cibuildwheel.pypa.io/en/stable/options/#build-skip
-# archs = ["auto"]
-archs = ["x86_64"]
-# build = "*"
-build = "cp312-manylinux_x86_64"
-build_windows = "cp312-win_amd64"
-skip = ""
+# [tool.cibuildwheel]
+# # https://cibuildwheel.pypa.io/en/stable/options/#build-skip
+# # archs = ["auto"]
+# archs = ["x86_64"]
+# # build = "*"
+# build = "cp312-manylinux_x86_64"
+# build_windows = "cp312-win_amd64"
+# skip = ""

@@ -4,6 +4,11 @@ on:
   # [push, pull_request]
   workflow_dispatch:
 
+env:
+  CIBW_ARCHS: "x86_64"
+  CIBW_BUILD_WINDOWS: "cp312-win_amd64"
+  CIBW_BUILD_LINUX: "cp312-manylinux_x86_64"
+
 jobs:
   build_wheels:
     name: Build wheels on ${{ matrix.os }}
