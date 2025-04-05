@@ -1,0 +1,15 @@
+[build-system]
+requires = ["meson-python", "numpy"]
+build-backend = "mesonpy"
+
+
+[project]
+name = 'fempy'
+version = '0.0.1'
+description = 'Investigate integrating a cpp module into the python crmod code'
+# readme = 'README.md'
+requires-python = '>=3.8'
+# license = {file = 'LICENSE.txt'}
+authors = [
+  {name = 'Maximilian Weigand', email = 'mweigand@geo.uni-bonn.de'},
+]
