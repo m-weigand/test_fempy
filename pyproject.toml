@@ -20,4 +20,5 @@ authors = [
 archs = ["x86_64"]
 # build = "*"
 build = "cp312-manylinux_x86_64"
+build_windows = "cp312-win_amd64"
 skip = ""
