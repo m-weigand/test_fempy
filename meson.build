@@ -8,7 +8,8 @@ project('mxfem',
                           ])
 fc = meson.get_compiler('fortran')
 
-py = import('python').find_installation('''/home/mweigand/.virtualenvs/test/bin/python''', pure: false)
+# py = import('python').find_installation('''/home/mweigand/.virtualenvs/test/bin/python''', pure: false)
+py = import('python').find_installation(pure: false)
 py_dep = py.dependency()
 
 incdir_numpy = run_command(py,
@@ -106,7 +107,7 @@ py.extension_module('mxfem',
                      ],
                      include_directories: [
                      inc_np,
-                     '''/home/mweigand/Programme/CRTomo/crtomo_stable/src/pywrap/../''',
+                     '''./''',
                      ],
                      dependencies : [
                      py_dep,
