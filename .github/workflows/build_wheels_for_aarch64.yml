@@ -3,6 +3,10 @@ name: Build wheels for aarm64
 on:
   # [push, pull_request]
   workflow_dispatch:
+  workflow_run:
+    workflows: ["Trigger all wheel builds"] #Its the name of an workflow
+    types:
+      - completed
 
 env:
   CIBW_ARCHS_LINUX: "aarch64"
