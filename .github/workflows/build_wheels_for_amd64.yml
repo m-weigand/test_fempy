@@ -1,4 +1,4 @@
-name: Build wheels for arm64/x86_64
+name: Build wheels for AMD64/x86_64
 
 on:
   # [push, pull_request]
