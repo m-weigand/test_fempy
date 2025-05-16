@@ -141,7 +141,7 @@ contains
         errnr = 3
         mswitch = 0
         read(12,*,end=1001,err=999)
-        !read(12,'(a80)',end=1001,err=999) delem
+        read(12,'(a80)',end=1001,err=999) delem
         read(12,'(a80)',end=1001,err=999)
         read(12,'(a80)',end=1001,err=999) delectr
         read(12,'(a80)',end=1001,err=999) dsigma
