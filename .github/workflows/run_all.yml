@@ -1,2 +1,6 @@
 name: Trigger all wheel builds
 
+on:
+  workflow_dispatch:
+
+jobs:
