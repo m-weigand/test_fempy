@@ -1,4 +1,4 @@
-name: Build
+name: Build wheels for arm64/x86_64
 
 on:
   # [push, pull_request]
@@ -6,7 +6,7 @@ on:
 
 env:
   CIBW_ARCHS_LINUX: "x86_64"
-  CIBW_BUILD: "cp312-manylinux_x86_64 cp312-manylinux_x86_64"
+  CIBW_BUILD: "cp311-manylinux_x86_64 cp312-manylinux_x86_64 cp313-manylinux_x86_64"
 
 jobs:
   build_wheels:

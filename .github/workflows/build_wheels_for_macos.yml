@@ -5,8 +5,10 @@ on:
   workflow_dispatch:
 
 env:
-  CIBW_ARCHS_MACOS: "x86_64 universal2 arm64"
-  CIBW_BUILD: "cp313-macosx_x86_64 cp313-macosx_universal2 cp313-macosx_arm64"
+  # CIBW_ARCHS_MACOS: "x86_64 universal2 arm64"
+  # CIBW_BUILD: "cp313-macosx_x86_64 cp313-macosx_universal2 cp313-macosx_arm64"
+  CIBW_ARCHS_MACOS: "x86_64"
+  CIBW_BUILD: "cp313-macosx_x86_64"
 
 jobs:
   build_wheels:
@@ -14,6 +16,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
+        # https://docs.github.com/en/actions/using-github-hosted-runners/using-github-hosted-runners/about-github-hosted-runners#standard-github-hosted-runners-for-public-repositories
         os: [macos-latest]
 
     steps:
