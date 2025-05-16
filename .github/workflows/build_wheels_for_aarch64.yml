@@ -34,7 +34,7 @@ jobs:
 
       - name: Build wheels
         run: |
-          cd pycrmod_v1/
+          cd both_v1/
           python -m cibuildwheel --output-dir wheelhouse
         # to supply options, put them in 'env', like:
         # env:
@@ -44,4 +44,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: cibw-wheels-${{ matrix.os }}-${{ strategy.job-index }}
-          path: pycrmod_v1/wheelhouse/*.whl
+          path: both_v1/wheelhouse/*.whl
