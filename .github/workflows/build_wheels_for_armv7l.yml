@@ -1,4 +1,4 @@
-name: Build wheels on aarm64
+name: Build wheels for armv7l (32bit,rpi)
 
 on:
   # [push, pull_request]
@@ -6,7 +6,7 @@ on:
 
 env:
   CIBW_ARCHS_LINUX: "armv7l"
-  CIBW_BUILD: "cp313-manylinux_armv7l"
+  CIBW_BUILD: "cp311-manylinux_armv7l cp312-manylinux_armv7l cp313-manylinux_armv7l"
 
 jobs:
   build_wheels:
