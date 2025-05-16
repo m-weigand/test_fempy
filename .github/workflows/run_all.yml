@@ -4,3 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
+  do_less:
+    name: Do not much
+    steps:
+      - uses: actions/checkout@v4
