@@ -38,7 +38,8 @@ jobs:
       - name: Fix wheels with delvewheel
         run: |
           cd both_v1/wheelhouse
-          python -m delvewheel repair *.whl
+          python -m delvewheel show *.whl
+          python -m delvewheel repair -v *.whl
 
       - uses: actions/upload-artifact@v4
         with:
