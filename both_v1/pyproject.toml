@@ -18,6 +18,9 @@ CRMod = 'crtomo_wrapper.crmod:main'
 CRTomo = 'crtomo_wrapper.crtomo:main'
 pycrtomo_test = 'crtomo_tests.pycrtomo:main'
 
+[tool.meson-python.args]
+setup = ['--default-library=static']
+
 # [tool.cibuildwheel]
 # # https://cibuildwheel.pypa.io/en/stable/options/#build-skip
 # # archs = ["auto"]
