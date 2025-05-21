@@ -1,12 +1,12 @@
-project('pycrmod',
-        ['c', 'fortran'],
-        version : '0.1',
-        meson_version: '>= 1.1.0',
-        default_options : [
-                            'warning_level=1',
-                            'buildtype=release'
-                          ],
-  )
+# project('pycrmod',
+#         ['c', 'fortran'],
+#         version : '0.1',
+#         meson_version: '>= 1.1.0',
+#         default_options : [
+#                             'warning_level=1',
+#                             'buildtype=release'
+#                           ],
+#   )
 add_global_link_arguments(
   '-static-libgcc',
   #'-static',

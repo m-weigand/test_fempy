@@ -4,7 +4,8 @@ py_dep = py.dependency()
 
 python_sources = [
   '__init__.py',
-  'pycrtomo.py'
+  'pycrtomo.py',
+  'extract_pyinv_examples.py',
 ]
 
 py.install_sources(

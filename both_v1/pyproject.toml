@@ -12,11 +12,15 @@ requires-python = '>=3.8'
 authors = [
   {name = 'Maximilian Weigand', email = 'mweigand@geo.uni-bonn.de'},
 ]
+dependencies = [
+	"numpy",
+]
 
 [project.scripts]
 CRMod = 'crtomo_wrapper.crmod:main'
 CRTomo = 'crtomo_wrapper.crtomo:main'
 pycrtomo_test = 'crtomo_tests.pycrtomo:main'
+pycrtomo_extract_examples = 'crtomo_tests.extract_pyinv_examples:main'
 
 [tool.meson-python.args]
 setup = ['--default-library=static']
