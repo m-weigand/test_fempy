@@ -1,4 +1,5 @@
 name: Build wheels for MacOS
+# https://github.com/scipy/scipy/blob/main/tools/wheels/cibw_before_build_macos.sh
 
 on:
   # [push, pull_request]

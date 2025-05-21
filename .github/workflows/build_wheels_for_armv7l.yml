@@ -2,6 +2,7 @@ name: Build wheels for armv7l (32bit,rpi)
 
 on:
   # [push, pull_request]
+  workflow_call:
   workflow_dispatch:
 
 env:

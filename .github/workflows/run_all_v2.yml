@@ -6,3 +6,9 @@ on:
 jobs:
   build_aarch64:
     uses: ./.github/workflows/build_wheels_for_aarch64.yml
+  build_amd64:
+    uses: ./.github/workflows/build_wheels_for_amd64.yml
+  build_armv7l:
+    uses: ./.github/workflows/build_wheels_for_armv7l.yml
+  build_windows:
+    uses: ./.github/workflows/build_wheels_for_win.yml
