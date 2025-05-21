@@ -2,6 +2,7 @@ name: Build wheels for aarm64
 
 on:
   # [push, pull_request]
+  workflow_call:
   workflow_dispatch:
   workflow_run:
     workflows: ["Trigger all wheel builds"] #Its the name of an workflow

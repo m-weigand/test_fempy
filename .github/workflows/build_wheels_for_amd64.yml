@@ -1,6 +1,7 @@
 name: Build wheels for AMD64/x86_64
 
 on:
+  workflow_call:
   # [push, pull_request]
   workflow_dispatch:
 
