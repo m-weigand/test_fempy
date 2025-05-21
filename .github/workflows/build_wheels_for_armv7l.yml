@@ -7,7 +7,7 @@ on:
 
 env:
   CIBW_ARCHS_LINUX: "armv7l"
-  CIBW_BUILD: "cp311-manylinux_armv7l cp312-manylinux_armv7l cp313-manylinux_armv7l"
+  CIBW_BUILD: "cp39-manylinux_armv7l cp310-manylinux_armv7l cp311-manylinux_armv7l cp312-manylinux_armv7l cp313-manylinux_armv7l"
 
 jobs:
   build_wheels:
