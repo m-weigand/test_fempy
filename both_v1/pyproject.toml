@@ -4,7 +4,7 @@ build-backend = "mesonpy"
 
 [project]
 name = 'pycrtomomod'
-version = '0.0.2'
+version = '0.0.3'
 description = 'Investigate integrating a cpp module into the python crmod code'
 # readme = 'README.md'
 requires-python = '>=3.8'
@@ -19,11 +19,14 @@ dependencies = [
 [project.scripts]
 CRMod = 'crtomo_wrapper.crmod:main'
 CRTomo = 'crtomo_wrapper.crtomo:main'
+CutMcK = 'crtomo_wrapper.cutmck:main'
 pycrtomo_test = 'crtomo_tests.pycrtomo:main'
 pycrtomo_extract_examples = 'crtomo_tests.extract_pyinv_examples:main'
 
+# https://mesonbuild.com/meson-python/how-to-guides/meson-args.html
 [tool.meson-python.args]
 setup = ['--default-library=static']
+compile = ['-j2']
 
 # [tool.cibuildwheel]
 # # https://cibuildwheel.pypa.io/en/stable/options/#build-skip
@@ -33,3 +36,4 @@ setup = ['--default-library=static']
 # build = "cp312-manylinux_x86_64"
 # build_windows = "cp312-win_amd64"
 # skip = ""
+

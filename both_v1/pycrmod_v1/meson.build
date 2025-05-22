@@ -5,13 +5,7 @@
 #         default_options : [
 #                             'warning_level=1',
 #                             'buildtype=release'
-#                           ],
-#   )
-#add_global_link_arguments(
-#  '-static-libgcc',
-#  #'-static',
-#  language: 'c',
-#)
+#                           ])
 fc = meson.get_compiler('fortran')
 
 # py = import('python').find_installation('''/home/mweigand/.virtualenvs/invmod/bin/python''', pure: false)

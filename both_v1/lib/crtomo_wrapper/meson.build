@@ -6,6 +6,7 @@ python_sources = [
   '__init__.py',
   'crmod.py',
   'crtomo.py',
+  'cutmckee.py',
 ]
 
 py.install_sources(
