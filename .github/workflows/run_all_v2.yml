@@ -1,9 +1,11 @@
-name: V2 Trigger all wheel builds
+name: Trigger all source and wheel builds (no MacOS)
 
 on:
   workflow_dispatch:
 
 jobs:
+  build_source:
+    uses: ./.github/workflows/build_source.yml
   build_aarch64:
     uses: ./.github/workflows/build_wheels_for_aarch64.yml
   build_amd64:
