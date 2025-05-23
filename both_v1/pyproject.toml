@@ -5,11 +5,12 @@ build-backend = "mesonpy"
 [project]
 name = 'pycrtomomod'
 version = '0.0.4'
-description = 'Investigate integrating a cpp module into the python crmod code'
+description = 'Python-wrapper modules for CRMod, CRTomo, CutMcK. Original code by Andreas Kemna.'
 # readme = 'README.md'
 requires-python = '>=3.8'
 # license = {file = 'LICENSE.txt'}
 authors = [
+  {name = 'Andreas Kemna', email = 'kemna@geo.uni-bonn.de'},
   {name = 'Maximilian Weigand', email = 'mweigand@geo.uni-bonn.de'},
 ]
 dependencies = [
@@ -19,7 +20,7 @@ dependencies = [
 [project.scripts]
 CRMod = 'crtomo_wrapper.crmod:main'
 CRTomo = 'crtomo_wrapper.crtomo:main'
-CutMcK = 'crtomo_wrapper.cutmck:main'
+CutMcK = 'crtomo_wrapper.cutmckee:main'
 pycrtomo_test = 'crtomo_tests.pycrtomo:main'
 pycrtomo_extract_examples = 'crtomo_tests.extract_pyinv_examples:main'
 
