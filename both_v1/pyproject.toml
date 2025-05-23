@@ -12,6 +12,7 @@ requires-python = '>=3.8'
 authors = [
   {name = 'Andreas Kemna', email = 'kemna@geo.uni-bonn.de'},
   {name = 'Maximilian Weigand', email = 'mweigand@geo.uni-bonn.de'},
+  {name = 'Geophysics Section, University of Bonn, Germany', email = 'kemna@geo.uni-bonn.de'},
 ]
 dependencies = [
 	"numpy",
