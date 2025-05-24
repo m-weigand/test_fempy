@@ -53,7 +53,6 @@ py.extension_module('pycutmck',
                      ],
                      include_directories: [
                      inc_np,
-                     '''/home/mweigand/Programme/crtomo_stable/src/pywrap/../../cutmckee''',
                      ],
                      dependencies : [
                      py_dep,
