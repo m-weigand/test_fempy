@@ -279,7 +279,7 @@ SUBROUTINE rall(kanal,delem,delectr,dstrom,drandb,&
     crtf = .TRUE.
     97 IF (.NOT.crtf) THEN
         PRINT*,'Creating inversion directory '//TRIM(ramd)
-        CALL SYSTEM ('mkdir '//TRIM(ramd))
+        CALL SYSTEM ('mkdir "'//TRIM(ramd)//'"')
     END IF
     fetxt = 'rall -> Difference inversion ?'
     CALL read_comments(fpcfg)
