@@ -16,7 +16,7 @@ module cmk
 
         !.....................................................................
 
-        USE errmod, only: fetxt
+        USE errmod, only: fetxt, errnr
         USE elemmod, only: sanz, snr, nelanz, selanz, nrel, elanz, typanz, mb
         USE electrmod
         USE relem_mod
@@ -29,9 +29,6 @@ module cmk
         ! INCLUDE 'err.fin'
         ! COMMON
         INTEGER(KIND = 4), INTENT(OUT) :: return_value
-
-        ! Fehlernummer
-        integer :: errnr
 
         ! Fehlerart
         ! 0 : GKS - nicht aktiv, Programm nicht verlassen
