@@ -2,4 +2,4 @@ import pycrmod
 
 
 def main():
-    pycrmod.fem_pyw.forward_calculation()
+    return pycrmod.fem_pyw.forward_calculation()

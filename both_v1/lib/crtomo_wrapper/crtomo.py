@@ -1,5 +1,5 @@
 import pycrtomo
 
-def main():
-    pycrtomo.pyinv.invertpy()
 
+def main():
+    return pycrtomo.pyinv.invertpy()

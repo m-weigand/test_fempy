@@ -3,4 +3,4 @@ import pycutmck
 
 
 def main():
-    pycutmck.cmk.run_cutmck()
+    return pycutmck.cmk.run_cutmck()
