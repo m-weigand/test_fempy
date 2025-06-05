@@ -1,7 +1,7 @@
 module pyinv
     ! variable declarations here
     contains
-        subroutine invertpy()
+        subroutine invertpy(return_value)
             ! Copyright © 1990-2020 Andreas Kemna <kemna@geo.uni-bonn.de>
             ! Copyright © 2008-2020 CRTomo development team (see AUTHORS file)
             !
@@ -72,6 +72,7 @@ module pyinv
             !!!$   USE portlib
 
             IMPLICIT NONE
+            INTEGER(KIND = 4), INTENT(OUT) :: return_value
 
             CHARACTER(256)         :: ftext
             INTEGER                :: c1,i,count,mythreads,maxthreads
@@ -1160,6 +1161,9 @@ module pyinv
 
             !!! also write the final statement to STDOU
             WRITE(*,*) '***finished***'
+            return_value = 0
+            return
+
             ! STOP '0'
 
             !!!$.....................................................................
@@ -1172,6 +1176,8 @@ module pyinv
             WRITE(fperr,'(a80,i3,i1)') fetxt,errnr,errflag
             WRITE(fperr,*)ftext
             CLOSE(fperr)
+            return_value = 1
+            return
 
             ! STOP '-1'
 

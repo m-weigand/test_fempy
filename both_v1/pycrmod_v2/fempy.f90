@@ -456,28 +456,30 @@ contains
     ! not sure when we actually want to deallocate this
     ! if (allocated(out_ab)) deallocate(out_ab)
 
-    return_value = 25
+    return_value = 0
     return
 
     ! various error states
 !!!$   (Fehler-) Meldung schreiben
-999 open(9,file='error.dat',status='replace')
+999 write (*,*) 'ERROR: Writing error.dat (return value -1)'
+    open(9,file='error.dat',status='replace')
     errflag = 2
     CALL get_error(ftext,errnr,errflag,fetxt)
     write(9,'(a80,i3,i1)') fetxt,errnr,errflag
     write(9,*) ftext
     close(9)
-    return_value = -1
+    return_value = 1
     return
 
-1001 open(9,file='error.dat',status='replace')
+1001    write (*,*) 'ERROR: Writing error.dat (return value -2)'
+        open(9,file='error.dat',status='replace')
         errnr   = 2
         errflag = 2
         CALL get_error(ftext,errnr,errflag,fetxt)
         write(9,'(a80,i3,i1)') fetxt,errnr,errflag
         write(9,*)ftext
         close(9)
-        return_value = -2
+        return_value = 2
         return
 
     end subroutine forward_calculation
