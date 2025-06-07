@@ -1,4 +1,4 @@
-CHARACTER(256) :: fetxt(111)
+CHARACTER(256) :: fetxt(101)
 
    fetxt(1)=' Error opening'
    fetxt(2)=' End of File encountered'
@@ -6,7 +6,7 @@ CHARACTER(256) :: fetxt(111)
    fetxt(4)=' Error writing'
    fetxt(5)=' Max. # nodes exceeded'
    fetxt(6)=' Max. # element types exceeded'
-   fetxt(7)=' Max. bandwidth exceeded'
+   fetxt(7)=' Max. bandwith exceeded'
    fetxt(8)=' Max. # element nodes exceeded'
    fetxt(9)=' Max. # elements exceeded'
    fetxt(10)=' Max. # boundary elements exceeded'
@@ -100,13 +100,3 @@ CHARACTER(256) :: fetxt(111)
    fetxt(98)=' Inadmissible step factor'
    fetxt(99)=' All data excluded'
    fetxt(100)=' Specify starting model'
-   fetxt(101)=' Combined usage of homogeneous Dirichlet and mixed boundary condition unallowed'
-   fetxt(102)=' Specify fictitious sink node'
-   fetxt(103)=' Specify Dirichtlet node'
-   fetxt(104)=' Invalid parameters in resistance error model'
-   fetxt(105)=' Invalid parameters in phase error model'
-   fetxt(106)=' Mixed boundary condition not implemented for pure 2D'
-   fetxt(107)=' Cholesky decomposition failed factorization'
-   fetxt(108)=' Solving linear system failed indefinite?'
-   fetxt(109)=' Min. stepsize reached Execution time:'
-   fetxt(110)=' Mixed boundary condition not yet implemented for 2D case'
