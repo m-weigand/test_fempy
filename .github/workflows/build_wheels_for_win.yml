@@ -7,7 +7,7 @@ on:
 
 env:
   CIBW_ARCHS_WINDOWS: "AMD64"
-  CIBW_BUILD: "cp312-win_* cp313-win_* cp414-win_*"
+  CIBW_BUILD: "cp312-win_* cp313-win_* cp314-win_*"
 
 jobs:
   build_wheels:
