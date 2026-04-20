@@ -34,6 +34,12 @@ jobs:
           # which conda
           # which mamba
 
+      - name: test 1
+        run: |
+          which gfortran
+          # which conda
+          # which mamba
+
       # - name: Install cibuildwheel
       #   run: python -m pip install cibuildwheel==2.23.3
 
