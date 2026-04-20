@@ -1,4 +1,4 @@
-name: Build wheels for MacOS
+name: STAGING Build wheels for MacOS
 # https://github.com/scipy/scipy/blob/main/tools/wheels/cibw_before_build_macos.sh
 
 on:
@@ -37,9 +37,14 @@ jobs:
       - name: Build wheels
         run: |
           cd both_v1/
-          python -m cibuildwheel --output-dir wheelhouse
           pip wheel .
           ls -l
+
+      - name: Build wheels via cibuildwheekl
+        run: |
+          pwd
+          cd both_v1/
+          python -m cibuildwheel --output-dir wheelhouse
         # to supply options, put them in 'env', like:
         # env:
         #   CIBW_SOME_OPTION: value
