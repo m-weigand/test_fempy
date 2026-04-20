@@ -8,7 +8,7 @@ project('pycrtomomod',
                           ])
 
 # not yet sure if we need the following three lines
-add_project_link_arguments('-Wl,-ld_classic', language : ['c', 'cpp', 'fortran'])
+# add_project_link_arguments('-Wl,-ld_classic', language : ['c', 'cpp', 'fortran'])
 cc = meson.get_compiler('c')
 ff = meson.get_compiler('fortran')
 
