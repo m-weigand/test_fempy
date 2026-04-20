@@ -35,11 +35,16 @@ jobs:
           
       - name: Install gfortran
         run: |
-          brew update
-          brew install gfortran
+          brew reinstall gfortran
+
+      - name: check gfortran 1
+        run: |
+          brew reinstall gfortran
 
       - name: test 1
         run: |
+          ls -1 /opt/homebrew/bin
+          env
           gfortran
           # which conda
           # which mamba
