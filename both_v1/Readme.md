@@ -15,7 +15,11 @@
         * remove virtualenv-specific python path
         * remove project(...) call, as we use this project as a subproject
 
-## Building locally
+## Building wheels on local machine
+
+    pip wheel .
+
+## Building locally with cibuildwheel
 
     mkvirtualenv crtomo
     pip install cibuildwheel
