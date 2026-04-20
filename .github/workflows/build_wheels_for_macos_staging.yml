@@ -9,11 +9,14 @@ env:
   # CIBW_ARCHS_MACOS: "x86_64 universal2 arm64"
   # CIBW_BUILD: "cp313-macosx_x86_64 cp313-macosx_universal2 cp313-macosx_arm64"
   # CIBW_ARCHS_MACOS: "x86_64"
-  CIBW_ARCHS_MACOS: "arm64"
+  CIBW_ARCHS_MACOS: "arm64 x86_64"
   # https://cibuildwheel.pypa.io/en/stable/options/
-  CIBW_BUILD: "cp313-macosx_arm64 cp314-macosx_arm64"
+  # CIBW_BUILD: "cp313-macosx_arm64 cp314-macosx_arm64"
+  CIBW_BUILD: "cp313-macosx_x86_64"
   # https://cibuildwheel.pypa.io/en/stable/platforms/#macos-version-compatibility
-  MACOSX_DEPLOYMENT_TARGET: "13.0"
+  # apparently we need to set it to 15 because gcc is built only for that....
+  # at least with 'mamba install gcc'
+  MACOSX_DEPLOYMENT_TARGET: "15.0"
 
 
 jobs:
