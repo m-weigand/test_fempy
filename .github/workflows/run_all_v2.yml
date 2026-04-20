@@ -14,3 +14,5 @@ jobs:
     uses: ./.github/workflows/build_wheels_for_armv7l.yml
   build_windows:
     uses: ./.github/workflows/build_wheels_for_win.yml
+  build_macosx:
+    uses: ./.github/workflows/build_wheels_for_macos.yml
