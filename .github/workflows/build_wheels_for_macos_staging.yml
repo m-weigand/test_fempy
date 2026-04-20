@@ -29,8 +29,7 @@ jobs:
       - name: Install stuff
         run: |
           brew update
-          brew install libomp gfortran
-          which gfortran
+          brew install libomp
           # which conda
           # which mamba
 
