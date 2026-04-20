@@ -32,10 +32,15 @@ jobs:
           brew install libomp
           # which conda
           # which mamba
+          
+      - name: Install gfortran
+        run: |
+          brew update
+          brew install gfortran
 
       - name: test 1
         run: |
-          which gfortran
+          gfortran
           # which conda
           # which mamba
 
@@ -48,7 +53,7 @@ jobs:
           pip wheel .
           ls -l
 
-      - name: Build wheels via cibuildwheekl
+      - name: Build wheels via cibuildwheel
         run: |
           pwd
           cd both_v1/
