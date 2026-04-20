@@ -3,6 +3,7 @@ name: STAGING Build wheels for MacOS
 
 on:
   # [push, pull_request]
+  workflow_call:
   workflow_dispatch:
 
 env:
