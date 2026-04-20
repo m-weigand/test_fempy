@@ -11,6 +11,8 @@ env:
   # CIBW_ARCHS_MACOS: "x86_64"
   CIBW_ARCHS_MACOS: "arm64"
   CIBW_BUILD: "cp313-macosx_arm64 cp314-macosx_arm64"
+  MACOSX_DEPLOYMENT_TARGET: "15.0"
+
 
 jobs:
   build_wheels:
@@ -22,7 +24,7 @@ jobs:
         os: [macos-latest]
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       # Used to host cibuildwheel
       - uses: actions/setup-python@v5
@@ -64,6 +66,7 @@ jobs:
           pwd
           cd both_v1/
           python -m cibuildwheel --output-dir wheelhouse
+          ls wheelhouse
         # to supply options, put them in 'env', like:
         # env:
         #   CIBW_BUILD: "cp314-macosx_arm64"
